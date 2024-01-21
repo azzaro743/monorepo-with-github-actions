@@ -10,6 +10,7 @@
   "devDependencies": {
     "@nx/js": "17.2.8",
     "nx": "17.2.8",
+    "semantic-release": "^23.0.0",
     "typescript": "^5.3.3"
   },
   "workspaces": [
