@@ -21,4 +21,4 @@ jobs:
         run: yarn
 
       - name: Build packages
-        run: git fetch && yarn build:affected
+        run: yarn build:affected --base=origin/main
