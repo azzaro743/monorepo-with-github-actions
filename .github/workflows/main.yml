@@ -22,5 +22,23 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Build packages
-        run: yarn build:affected
+      - name: Create GitHub App Token
+        id: create_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: 698956
+          installation_id: 45078155
+          private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
+      - name: Configure Git
+        run: |
+          git config --global credential.helper "store --file=.git/credentials"
+          git config --global user.email "github-automation@gmail.com"
+          git config --global user.name "Github Automation"
+          echo "https://github.com/${{ github.repository }}:${{ steps.create_token.outputs.token }}" > .git/credentials
+
+      - name: Release affected packages
+        run: |
+          git checkout ${{ github.ref_name }}
+          yarn release:affected --base=${{ github.event.before }} --head=${{ github.sha }}
+          git push --follow-tags --set-upstream origin ${{ github.ref_name }} 
