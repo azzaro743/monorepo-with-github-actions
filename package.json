@@ -14,5 +14,8 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "optionalDependencies": {
+    "@nx/nx-linux-x64-gnu": "^15.8.5"
+  }
 }
