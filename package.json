@@ -6,7 +6,7 @@
     "build:many": "nx run-many -t build",
     "build:affected": "nx affected -t build",
     "release:many": "nx run-many -t release",
-    "releae:affected": "nx affected -t release"
+    "release:affected": "nx affected -t release"
   },
   "private": true,
   "devDependencies": {
