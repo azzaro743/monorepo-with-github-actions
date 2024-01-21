@@ -26,7 +26,6 @@ jobs:
         id: create_token
         uses: tibdex/github-app-token@v1
         with:
-          app_id: 698956
           private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
       - name: Configure Git
