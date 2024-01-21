@@ -2,7 +2,10 @@
   "name": "monorepo-with-github-actions",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:many": "nx run-many -t build",
+    "build:affected": "nx affected -t build"
+  },
   "private": true,
   "devDependencies": {
     "@nx/js": "17.2.8",
