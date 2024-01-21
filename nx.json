@@ -10,6 +10,11 @@
     },
     "lint": {
       "cache": true
+    },
+    "release": {
+      "dependsOn": [
+        "^release"
+      ]
     }
   }
 }

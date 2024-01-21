@@ -4,11 +4,17 @@
   "license": "MIT",
   "scripts": {
     "build:many": "nx run-many -t build",
-    "build:affected": "nx affected -t build"
+    "build:affected": "nx affected -t build",
+    "release:many": "nx run-many -t release",
+    "releae:affected": "nx affected -t release"
   },
   "private": true,
   "devDependencies": {
     "@nx/js": "17.2.8",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
     "nx": "17.2.8",
     "semantic-release": "^23.0.0",
     "typescript": "^5.3.3"
