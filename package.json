@@ -24,6 +24,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "commitlint": "^18.5.0"
+    "commitlint": "^18.5.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2"
   }
 }
