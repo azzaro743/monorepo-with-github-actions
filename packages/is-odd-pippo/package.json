@@ -10,6 +10,6 @@
       "postrelease": ""
     },
     "dependencies": {
-      "is-even": "*"
+      "is-even-pippo": "*"
     }
 }

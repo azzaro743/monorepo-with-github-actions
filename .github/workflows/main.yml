@@ -10,11 +10,6 @@ env:
 jobs:
   relese:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # to be able to publish a GitHub release
-      issues: write # to be able to comment on released issues
-      pull-requests: write # to be able to comment on released pull requests
-      id-token: write # to enable use of OIDC for npm provenance
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -41,5 +36,6 @@ jobs:
 
       - name: Release affected packages
         run: |
-          echo "File Argument: ${{ github.event.inputs.file }}"
-          yarn release:many --base=${{ github.event.before }} --head=${{ github.sha }}
+          git checkout ${{ github.ref_name }}
+          yarn release:many --base=${{ github.event.before }} --head=${{ github.sha }}        
+          git push --follow-tags --set-upstream origin ${{ github.ref_name }}
