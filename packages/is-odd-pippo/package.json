@@ -12,8 +12,7 @@
     "scripts": {
       "build": "tsc index.ts --outDir dist",
       "prerelease": "yarn build",
-      "release": "semantic-release",
-      "postrelease": ""
+      "release": "semantic-release"
     },
     "dependencies": {
       "is-even-pippo": "*"

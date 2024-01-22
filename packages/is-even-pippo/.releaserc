@@ -1,6 +1,6 @@
 {
     "branches": ["main"],
-    "tagFormat": "is-even-pippo/v${version}",
+    "tagFormat": "is-even-pippo@${version}",
     "plugins": [
         {
             "preset": "angular",
