@@ -3,6 +3,10 @@ on:
     branches:
       - main
 
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
 jobs:
   relese:
     runs-on: ubuntu-latest
@@ -28,11 +32,10 @@ jobs:
           git config --global credential.helper "store --file=.git/credentials"
           git config --global user.email "github-automation@gmail.com"
           git config --global user.name "Github Automation"
-          echo "https://github.com/${{ github.repository }}:${{ secrets.GH_TOKEN }}" > .git/credentials
+          echo "https://github.com/${{ github.repository }}:$GITHUB_TOKEN" > .git/credentials
 
       - name: Release affected packages
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        
         run: |
           git checkout ${{ github.ref_name }}
           yarn release:affected --base=${{ github.event.before }} --head=${{ github.sha }}
