@@ -1,3 +1,3 @@
-export const isEvenPippoBomboclat = (x: number) => {
+export const isEven = (x: number) => {
   return x % 2 === 0;
 };
