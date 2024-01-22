@@ -16,7 +16,32 @@
           "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
         }
     }],
-        "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+        },
+        "preset": "conventionalcommits",
+        "presetConfig": {
+          "types": [
+            { "type": "build", "scope": "is-even-azzaro","section": "Build System", "hidden": false },
+            { "type": "chore", "scope": "is-even-azzaro","section": "Build System", "hidden": false },
+            { "type": "ci", "scope": "is-even-azzaro","section": "Continuous Integration", "hidden": false },
+            { "type": "docs", "scope": "is-even-azzaro","section": "Documentation", "hidden": false },
+            { "type": "feat", "scope": "is-even-azzaro","section": "Features", "hidden": false },
+            { "type": "fix", "scope": "is-even-azzaro","section": "Bug Fixes", "hidden": false },
+            { "type": "perf", "scope": "is-even-azzaro","section": "Performance Improvements", "hidden": false },
+            { "type": "refactor", "scope": "is-even-azzaro","section": "Code Refactoring", "hidden": false },
+            { "type": "style", "scope": "is-even-azzaro","section": "Styles", "hidden": false },
+            { "type": "test", "scope": "is-even-azzaro","section": "Tests", "hidden": false }
+          ]
+        },
+        "writerOpts": {
+          "commitsSort": ["subject", "scope"]
+        }
+      }
+    ],
         "@semantic-release/npm",
         [
             "@semantic-release/github",

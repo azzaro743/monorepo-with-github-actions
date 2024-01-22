@@ -3,4 +3,4 @@ export const isEven = (x: number) => {
   return x % 2 === 0;
 };
 
-console.log('pippo is the best')
+console.log('pippo is updated')
