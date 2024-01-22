@@ -35,4 +35,6 @@ jobs:
           echo "https://github.com/${{ github.repository }}:$GITHUB_TOKEN" > .git/credentials
 
       - name: Release affected packages
-        run: yarn release:many --base=${{ github.event.before }} --head=${{ github.sha }}
+        run: |
+          echo "File Argument: ${{ github.event.inputs.file }}"
+          yarn release:many --base=${{ github.event.before }} --head=${{ github.sha }}
