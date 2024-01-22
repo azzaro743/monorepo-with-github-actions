@@ -1,20 +1,20 @@
 {
-    "name": "is-odd-pippo",
-    "version": "1.0.0",
-    "main": "dist/index.js",
-    "files": [
-        "dist"
-    ],
-    "type": "module",
-    "license": "MIT",
-    "private": false,
-    "devDependencies": {},
-    "scripts": {
-        "build": "tsc index.ts --outDir dist",
-        "prerelease": "yarn build",
-        "release": "semantic-release"
-    },
-    "dependencies": {
-        "is-even-pippo": "*"
-    }
+  "name": "is-odd-pippo",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc index.ts --outDir dist",
+    "prerelease": "yarn build",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "is-even-pippo": "*"
+  }
 }

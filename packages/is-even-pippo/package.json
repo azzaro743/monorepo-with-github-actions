@@ -1,17 +1,17 @@
 {
-    "name": "is-even-pippo",
-    "version": "1.2.1",
-    "main": "dist/index.js",
-    "files": [
-        "dist"
-    ],
-    "type": "module",
-    "license": "MIT",
-    "private": false,
-    "devDependencies": {},
-    "scripts": {
-        "build": "tsc index.ts --outDir dist",
-        "prerelease": "yarn build",
-        "release": "semantic-release"
-    }
+  "name": "is-even-pippo",
+  "version": "1.2.1",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc index.ts --outDir dist",
+    "prerelease": "yarn build",
+    "release": "semantic-release"
+  }
 }
