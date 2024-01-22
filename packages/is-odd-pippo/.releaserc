@@ -1,4 +1,5 @@
 {
+  "release": {
     "branches": ["main"],
     "tagFormat": "is-odd-pippo@${version}",
     "plugins": [
@@ -27,4 +28,5 @@
           ],
           "@semantic-release/git"
     ]
+  }  
 }
