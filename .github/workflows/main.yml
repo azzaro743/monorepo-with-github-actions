@@ -35,8 +35,4 @@ jobs:
           echo "https://github.com/${{ github.repository }}:$GITHUB_TOKEN" > .git/credentials
 
       - name: Release affected packages
-        
-        run: |
-          git checkout ${{ github.ref_name }}
-          yarn release:affected --base=${{ github.event.before }} --head=${{ github.sha }}
-          git push --follow-tags --set-upstream origin ${{ github.ref_name }} 
+        run: yarn release:affected --base=${{ github.event.before }} --head=${{ github.sha }}
