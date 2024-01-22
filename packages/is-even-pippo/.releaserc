@@ -3,6 +3,7 @@
     "tagFormat": "is-even-pippo@${version}",
     "plugins": [
         {
+            "preset": "angular",
             "releaseRules": [
               { "breaking": true, "scope": "/is-even-pippo*/", "release": "major" },
               { "type": "feat", "scope": "/is-even-pippo*/", "release": "minor" },
