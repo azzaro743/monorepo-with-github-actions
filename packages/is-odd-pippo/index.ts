@@ -1,3 +1,3 @@
-import { isEvenPippoBomboclat } from "is-even-pippo";
+import { isEven } from "is-even-pippo";
 
-export const isOdd = (x: number) => !isEvenPippoBomboclat(x);
+export const isOdd = (x: number) => !isEven(x);
