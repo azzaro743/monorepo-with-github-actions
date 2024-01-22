@@ -1,16 +1,16 @@
 {
     "branches": ["main"],
-    "tagFormat": "is-even-pippo@${version}",
+    "tagFormat": "is-even-azzaro@${version}",
     "plugins": [
       [
         "@semantic-release/commit-analyzer",{
         "releaseRules": [
-          { "type": "feat", "scope": "is-even-pippo", "release": "minor" },
-          { "type": "docs", "scope": "is-even-pippo", "release": "patch" },
-          { "type": "refactor", "scope": "is-even-pippo", "release": "patch" },
-          { "type": "style", "scope": "is-even-pippo","release": "patch" },
-          { "type": "fix", "scope": "is-even-pippo", "release": "patch" },
-          { "type": "ci", "scope": "is-even-pippo", "release": "patch"}
+          { "type": "feat", "scope": "is-even-azzaro", "release": "minor" },
+          { "type": "docs", "scope": "is-even-azzaro", "release": "patch" },
+          { "type": "refactor", "scope": "is-even-azzaro", "release": "patch" },
+          { "type": "style", "scope": "is-even-azzaro","release": "patch" },
+          { "type": "fix", "scope": "is-even-azzaro", "release": "patch" },
+          { "type": "ci", "scope": "is-even-azzaro", "release": "patch"}
         ],
         "parserOpts": {
           "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
