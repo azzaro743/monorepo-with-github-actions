@@ -1,5 +1,6 @@
 {
     "branches": ["main"],
+    "tagFormat": "is-odd-pippo/v${version}",
     "plugins": [
         {
             "preset": "angular",
