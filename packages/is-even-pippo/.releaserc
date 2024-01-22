@@ -3,11 +3,15 @@
     "tagFormat": "is-even-pippo@${version}",
     "plugins": [
         {
-            "preset": "angular",
             "releaseRules": [
-              { "type": "docs", "scope": "README", "release": "patch" },
-              { "type": "refactor", "release": "patch" },
-              { "type": "style", "release": "patch" }
+              { "breaking": true, "scope": "is-even-pippo", "release": "major" },
+              { "type": "feat", "scope": "is-even-pippo", "release": "minor" },
+              { "type": "docs", "scope": "is-even-pippo", "release": "patch" },
+              { "type": "refactor", "scope": "is-even-pippo", "release": "patch" },
+              { "type": "style", "scope": "is-even-pippo","release": "patch" },
+              { "revert": true, "scope": "is-even-pippo", "release": "patch" },
+              { "type": "fix", "scope": "is-even-pippo", "release": "patch" },
+              {"type": "ci", "scope": "is-even-pippo", "release": "patch"}
             ],
             "parserOpts": {
               "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
