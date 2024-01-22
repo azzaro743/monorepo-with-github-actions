@@ -16,7 +16,32 @@
         }
     }]
         ,
-        "@semantic-release/release-notes-generator",
+        [
+          "@semantic-release/release-notes-generator",
+          {
+            "parserOpts": {
+              "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+            },
+            "preset": "conventionalcommits",
+            "presetConfig": {
+              "types": [
+                { "type": "build", "scope": "is-odd-azzaro","section": "Build System", "hidden": false },
+                { "type": "chore", "scope": "is-odd-azzaro","section": "Build System", "hidden": false },
+                { "type": "ci", "scope": "is-odd-azzaro","section": "Continuous Integration", "hidden": false },
+                { "type": "docs", "scope": "is-odd-azzaro","section": "Documentation", "hidden": false },
+                { "type": "feat", "scope": "is-odd-azzaro","section": "Features", "hidden": false },
+                { "type": "fix", "scope": "is-odd-azzaro","section": "Bug Fixes", "hidden": false },
+                { "type": "perf", "scope": "is-odd-azzaro","section": "Performance Improvements", "hidden": false },
+                { "type": "refactor", "scope": "is-odd-azzaro","section": "Code Refactoring", "hidden": false },
+                { "type": "style", "scope": "is-odd-azzaro","section": "Styles", "hidden": false },
+                { "type": "test", "scope": "is-odd-azzaro","section": "Tests", "hidden": false }
+              ]
+            },
+            "writerOpts": {
+              "commitsSort": ["subject", "scope"]
+            }
+          }
+        ],
         "@semantic-release/npm",
         [
             "@semantic-release/github",
