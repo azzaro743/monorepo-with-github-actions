@@ -3,11 +3,15 @@
     "tagFormat": "is-odd-pippo@${version}",
     "plugins": [
         {
-            "preset": "angular",
             "releaseRules": [
-              { "type": "docs", "scope": "README", "release": "patch" },
-              { "type": "refactor", "release": "patch" },
-              { "type": "style", "release": "patch" }
+              { "breaking": true, "scope": "is-odd-pippo", "release": "major" },
+              { "type": "feat", "scope": "is-odd-pippo", "release": "minor" },
+              { "type": "docs", "scope": "is-odd-pippo", "release": "patch" },
+              { "type": "refactor", "scope": "is-odd-pippo", "release": "patch" },
+              { "type": "style", "scope": "is-odd-pippo","release": "patch" },
+              { "revert": true, "scope": "is-odd-pippo", "release": "patch" },
+              { "type": "fix", "scope": "is-odd-pippo", "release": "patch" },
+              {"type": "ci", "scope": "is-odd-pippo", "release": "patch"}
             ],
             "parserOpts": {
               "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
