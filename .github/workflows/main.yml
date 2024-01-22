@@ -37,5 +37,5 @@ jobs:
       - name: Release affected packages
         run: |
           git checkout ${{ github.ref_name }}
-          yarn release:many --base=${{ github.event.before }} --head=${{ github.sha }}        
+          yarn release:affected --base=${{ github.event.before }} --head=${{ github.sha }}        
           git push --follow-tags --set-upstream origin ${{ github.ref_name }}
