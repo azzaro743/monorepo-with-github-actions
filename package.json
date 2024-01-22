@@ -12,6 +12,8 @@
   "devDependencies": {
     "@nx/js": "17.2.8",
     "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
     "@semantic-release/npm": "^11.0.2",
     "@semantic-release/release-notes-generator": "^12.1.0",
     "nx": "17.2.8",
