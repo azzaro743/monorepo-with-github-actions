@@ -2,6 +2,12 @@
     "name": "is-odd-pippo",
     "version": "0.0.0",
     "main": "dist/index.js",
+    "files": [
+      "dist"
+    ],
+    "type": "module",
+    "license": "MIT",
+    "private": false,
     "devDependencies": {},
     "scripts": {
       "build": "tsc index.ts --outDir dist",
